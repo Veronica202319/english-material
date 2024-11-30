@@ -9,11 +9,9 @@ categories: dictionary
 
 Welcome to the **Simple English Dictionary**, where you can find easy-to-understand definitions for common words and phrases.
 
-### Example Words:
+---
 
-1. **Apple**: A round fruit with red, yellow, or green skin and a sweet taste.
-2. **Run**: To move quickly by using your legs.
-3. **Happy**: Feeling good or pleased.
+### Example Words:
 
 1. **Apple**  
    A round fruit with red, yellow, or green skin and a sweet taste.  
@@ -46,5 +44,7 @@ Welcome to the **Simple English Dictionary**, where you can find easy-to-underst
 8. **Dog**  
    A loyal animal that barks and is often kept as a pet.  
    ![Dog](https://upload.wikimedia.org/wikipedia/commons/4/4c/Dog_icon.svg)
-   
+
+---
+
 Stay tuned for more words and updates!
