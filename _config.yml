@@ -1,41 +1,21 @@
 title: "Hello, world! I'm Veronica Santander"
-description: > 
-  I am an English teacher who wants to help with fun and interesting English material. 
-  This description will appear in your document head meta (for Google search results) and in your feed.xml site description.
-permalink: ":title/"
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g., /blog/
-url: "https://veronica202319.github.io"
+description: >
+  I am an English teacher who wants to help with fun and interesting English material.
+  This description will appear in search results and your feed.xml.
+baseurl: "/english-material" # Update with your subpath
+url: "https://veronica202319.github.io" # Add your site's base URL
+
 author: "Veronica Santander"
+author-img: "assets/images/author.jpg"
+about-author: "I am an English teacher who wants to share some interesting material for English classes."
+social-github: "VeronicaSantander"
+social-email: "vero9santander@gmail.com"
 
-
-# Author Settings
-author: "Veronica Santander" 
-author-img: "Veronica_Santander.jpg" # add your photo (ensure this file exists in the appropriate folder)
-about-author: "I am an English teacher who wants to share some interesting material for English classes." 
-social-github: "VeronicaSantander" # add your GitHub handle
-social-linkedin: "" # add your LinkedIn handle (if available)
-social-email: "vero9santander@gmail.com" # add your email
-
-# Disqus
-disqus-identifier: "TeacherVero" # add your Disqus identifier (if available)
-
-# Tracker
-analytics: "" # Google Analytics ID (if available)
-
-# Build Settings
 markdown: kramdown
 plugins:
-git add _config.yml
-git commit -m "Fix permalink structure"
-git push
-
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
 
 paginate: 5
-paginate_path: "/page/:num"
-permalink: /:categories/:title/
-
-
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+paginate_path: "/page:num"
