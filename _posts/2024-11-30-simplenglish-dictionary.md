@@ -4,6 +4,20 @@ title: "Simple English Dictionary"
 date: 2024-11-30
 categories: dictionary
 ---
+---
+layout: post
+title: "Sample Post"
+date: 2024-11-30
+categories: test
+---
+
+Welcome to this sample post! This is how your content will appear on the website.
+
+- Point 1
+- Point 2
+- Point 3
+
+Stay tuned for more updates!
 
 ## Simple English Dictionary
 
