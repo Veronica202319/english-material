@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
 <body>
-
-  <div class="wrapper">
-    {{ content }}
-  </div>
-  
-  {% include analytics.html %}
+    <div class="sidebar">
+        <img src="{{ site.author-img }}" alt="{{ site.author }}" class="author-img">
+        <h1>{{ site.author }}</h1>
+        <p>{{ site.about-author }}</p>
+    </div>
+    <div class="main-content">
+        {{ content }}
+    </div>
 </body>
 </html>
