@@ -1479,3 +1479,33 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
+
+.post {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.post-thumbnail {
+  flex-basis: 30%;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-content {
+  flex-basis: 70%;
+  padding: 15px;
+}
+
+.post-content .post-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.post-content .post-date {
+  color: #999;
+  font-size: 12px;
+}
+
