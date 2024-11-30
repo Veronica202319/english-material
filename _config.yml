@@ -4,14 +4,14 @@ description: >
   This description will appear in your document head meta (for Google search results) and in your feed.xml site description.
 permalink: ":title/"
 baseurl: "/flexible-jekyll" # the subpath of your site, e.g., /blog/
-url: "" # the base hostname & protocol for your site, e.g., http://example.com
-site-twitter: "" # if your site has a Twitter account, enter it here
+url: "https://veronica202319.github.io"
+author: "Veronica Santander"
+
 
 # Author Settings
-author: "Veronica Santander" # add your name
+author: "Veronica Santander" 
 author-img: "Veronica_Santander.jpg" # add your photo (ensure this file exists in the appropriate folder)
-about-author: "I am an English teacher who wants to share some interesting material for English classes." # add description
-social-twitter: "" # add your Twitter handle (if available)
+about-author: "I am an English teacher who wants to share some interesting material for English classes." 
 social-github: "VeronicaSantander" # add your GitHub handle
 social-linkedin: "" # add your LinkedIn handle (if available)
 social-email: "vero9santander@gmail.com" # add your email
@@ -33,7 +33,7 @@ git push
   - jekyll-paginate
   - jemoji
 
-paginate: 8
+paginate: 5
 paginate_path: "/page/:num"
 permalink: /:categories/:title/
 
