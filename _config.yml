@@ -2,7 +2,7 @@ title: "Hello, world! I'm Veronica Santander"
 description: > 
   I am an English teacher who wants to help with fun and interesting English material. 
   This description will appear in your document head meta (for Google search results) and in your feed.xml site description.
-permalink: ":title/" # permalink format
+permalink: ":title/"
 baseurl: "/flexible-jekyll" # the subpath of your site, e.g., /blog/
 url: "" # the base hostname & protocol for your site, e.g., http://example.com
 site-twitter: "" # if your site has a Twitter account, enter it here
