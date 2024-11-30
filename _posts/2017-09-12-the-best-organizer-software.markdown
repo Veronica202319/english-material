@@ -49,37 +49,72 @@ A ________ is a loyal pet to humans.
 
 ### Create Your Own Test:
 
-Use the form below to input words and definitions, and we’ll generate questions for you:
+<div id="quiz-container">
+  <h2>Interactive Quiz</h2>
 
-```html
-<form id="test-maker">
-  <label for="word">Enter Word:</label>
-  <input type="text" id="word" name="word" required>
+  <!-- Multiple Choice Question -->
+  <div>
+    <p><strong>What does "Bright" mean?</strong></p>
+    <form id="mcq">
+      <input type="radio" name="bright" value="A" id="mcq1"><label for="mcq1">A) To be clever.</label><br>
+      <input type="radio" name="bright" value="B" id="mcq2"><label for="mcq2">B) Giving off lots of light.</label><br>
+      <input type="radio" name="bright" value="C" id="mcq3"><label for="mcq3">C) Running fast.</label>
+    </form>
+  </div>
 
-  <label for="definition">Enter Definition:</label>
-  <input type="text" id="definition" name="definition" required>
+  <!-- Fill-in-the-Blank Question -->
+  <div>
+    <p><strong>Fill in the Blank:</strong> A ______ is a loyal pet to humans.</p>
+    <input type="text" id="fitb" placeholder="Your Answer">
+  </div>
 
-  <button type="submit">Generate Test</button>
-</form>
+  <!-- True or False -->
+  <div>
+    <p><strong>True or False:</strong> "Run" means to sit quietly.</p>
+    <form id="true-false">
+      <input type="radio" name="run" value="true" id="true"><label for="true">True</label><br>
+      <input type="radio" name="run" value="false" id="false"><label for="false">False</label>
+    </form>
+  </div>
 
-<div id="generated-test"></div>
+  <button onclick="submitQuiz()">Submit Answers</button>
+
+  <!-- Result Display -->
+  <div id="results" style="margin-top: 20px; font-weight: bold;"></div>
+</div>
 
 <script>
-  document.getElementById("test-maker").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const word = document.getElementById("word").value;
-    const definition = document.getElementById("definition").value;
+  function submitQuiz() {
+    let score = 0;
 
-    document.getElementById("generated-test").innerHTML = `
-      <h3>Generated Test:</h3>
-      <p><b>Word:</b> ${word}</p>
-      <p><b>Definition:</b> ${definition}</p>
-      <p><b>Question:</b> What does "${word}" mean?</p>
-      <ul>
-        <li>${definition}</li>
-        <li>Option 2</li>
-        <li>Option 3</li>
-      </ul>
-    `;
-  });
+    // Multiple Choice Question Scoring
+    const mcqAnswer = document.querySelector('input[name="bright"]:checked');
+    if (mcqAnswer && mcqAnswer.value === "B") {
+      score++;
+    }
+
+    // Fill-in-the-Blank Scoring
+    const fitbAnswer = document.getElementById("fitb").value.trim().toLowerCase();
+    if (fitbAnswer === "dog") {
+      score++;
+    }
+
+    // True or False Scoring
+    const tfAnswer = document.querySelector('input[name="run"]:checked');
+    if (tfAnswer && tfAnswer.value === "false") {
+      score++;
+    }
+
+    // Display Results
+    const results = document.getElementById("results");
+    results.textContent = `Your score: ${score}/3`;
+
+    // Feedback for incorrect answers
+    if (score < 3) {
+      results.textContent += " - Keep practicing!";
+    } else {
+      results.textContent += " - Excellent!";
+    }
+  }
 </script>
+
