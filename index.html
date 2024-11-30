@@ -1,19 +1,115 @@
----
-layout: main
----
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
-  </div>
-</article>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronica's English Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
 
-{% include pagination.html %}
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #e74c3c;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Veronica's English Hub</h1>
+        <p>Learn English with fun and interactive material!</p>
+    </header>
+    <div class="buttons">
+        <a href="/english-material/about/">About Me</a>
+        <a href="/english-material/dictionary/">Dictionary</a>
+        <a href="/english-material/flashcards/">Flashcards</a>
+        <a href="/english-material/grammar/">Grammar</a>
+        <a href="/english-material/test/">Interactive Test</a>
+        <a href="/english-material/contact/">Contact Me</a>
+    </div>
+    <footer>
+        © 2024 Veronica Santander | <a href="/english-material/contact/">Contact Me</a>
+    </footer>
+</body>
+</html>
