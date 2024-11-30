@@ -25,6 +25,10 @@ analytics: "" # Google Analytics ID (if available)
 # Build Settings
 markdown: kramdown
 plugins:
+git add _config.yml
+git commit -m "Fix permalink structure"
+git push
+
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
